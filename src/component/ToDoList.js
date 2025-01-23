@@ -5,7 +5,12 @@ export default function ToDoList({ toDoArray, removeTodo, setToDoArray }) {
   return (
     <ul>
       {toDoArray.map((item) => (
-        <List item={item} key={item.id} />
+        <List
+          item={item}
+          removeTodo={removeTodo}
+          setToDoArray={setToDoArray}
+          key={item.id}
+        />
       ))}
     </ul>
   );

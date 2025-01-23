@@ -1,7 +1,11 @@
 import React from "react";
 
-export default function List({ item, removeTodo }) {
-  console.log(item.id);
+export default function List({ item, setToDoArray }) {
+  // removeTodo function
+  const removeTodo = (id) => {
+    setToDoArray((item) => item.filter((item) => item.id !== id)); // remove the item from the array
+  };
+
   return (
     <li key={item.id}>
       <span>
